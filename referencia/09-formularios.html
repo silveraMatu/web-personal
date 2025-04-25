@@ -1,0 +1,52 @@
+<!--Esta pagina es para hacer un hipervinculo en la pagina de proyectos-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formularios HTML</title>
+    <link rel="stylesheet" href="formularios.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+  
+    <div class="myform">
+
+      <form action="">
+        <h1>Login</h1>
+        <!-- Esta parte pide el username-->
+        <div class = "login-box">
+          <input type="text" placeholder="Username" 
+          required>
+          <i class='bx bxs-user'></i>
+        </div>
+
+        <!-- Esta parte pide la contraseña-->
+
+        <div class="login-box">
+          <input type="password" placeholder="Password"
+          required>
+          <i class='bx bxs-lock-alt' ></i>
+        </div>
+
+        <div class = "remember-forgot">
+          <label><input type="checkbox">remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="SubmitButton">Login
+        </button>
+
+        <div class="Register_link">
+        <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+        
+      </form>
+
+    </div>
+
+  </body>
+</html>

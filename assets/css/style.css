@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+/*Flexbox usado para organizar el contenido principal de la página en columna*/
+body{
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+    background-color: #1b1b1b;
+}
+
+header{ 
+    font-family:"Courier New", Courier, monospace;
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border-bottom: 1px solid #1abc9c;
+}
+
+header h1{
+    margin-right: 1000px;
+    margin-bottom: 14px;
+}
+
+/*El flexbox de la parte de nevagación se encarga de ajustar los
+hipervínculos de manera horizontal y dar una separación de 50px entre ellos.*/
+.navegacion{
+    display: flex;
+    gap: 50px;
+    font-size: larger;
+    width: 50%;
+    margin: auto;
+    list-style: none;
+    margin-left: 500px;
+    margin-top: -60px;
+}
+
+.navegacion a{
+    text-decoration: none;
+   
+    color: #fff;
+    width: 150px;
+    height: 36px;
+    padding-top: 2%;
+    border-bottom: 2px solid;
+    border-right: 2px solid;;
+    font-weight: 600;
+}
+
+.navegacion a:hover, a.activado{
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+    font-size: 1.1em;
+    border-color: #1abc9c;
+    color: #1abc9c;
+    transition: 0.1s ease;
+}
+
+/*Main*/
+
+main{
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/*Flexbox usado para alinear la imagen y el contenido del hero en una fila*/
+.hero{
+    display: flex;
+    align-items: center; /*Centra verticalmente los elementos*/
+    gap: 50px;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #2c2a2a;
+    padding: 25px;
+    border-radius: 12px;
+    width: max-content;
+}
+
+.programmer{
+    width: 270px;
+}
+
+.hero-content{
+    max-width: 500px;
+}
+
+
+.terminalText{
+    display:block;
+    padding: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    white-space: nowrap; /*Evita que el texto se divida en varias lineas*/
+    border-right: 4px solid; /*Simula la linea que parpadea al final del texto*/
+    width: 16ch; /*Anchura de 16 caracteres*/
+    color: #fff;
+
+    animation: typing 1s steps(16), /*Aplica una animacion de maquina de escribir en 16 pasos.*/
+    blink .5s infinite step-end alternate; /*Aplica un parpadeo al borde derecho que simula el cursor*/
+    overflow: hidden; /*Oculta el contenido que aun no se ha escrito*/
+}
+
+@keyframes typing{
+    from {width: 0}
+}
+
+@keyframes blink{
+    50% {border-color: transparent}
+}
+
+.terminalText b{
+    color: #fff;
+    text-shadow: 2px 2px #1abc9c;
+}
+.hero-content p{
+    font-family:"Inter", sans-serif; ;
+    font-size: large;
+    color: #ffffff;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.hero-content p b{
+    color: #1abc9c;
+}
+
+.btn{
+    text-decoration: none;
+    color: #000;
+    background-color: rgb(212, 211, 211);
+
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 5px;
+
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-radius: 10px;
+    border-color: #9f9e9e;
+}
+.btn:hover{
+    color: #fff;
+    background-color: #1abc9c;
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+    font-size: 1.2em;
+    transition: 0.1s ease;
+    border-color: #27a88e;
+}
+
+/*Flexbox para distribuir elementos internos horizontalmente*/
+.extradata{
+    display: flex;
+    flex-wrap: wrap; /*Permite que los elementos ocupen varias lineas*/
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 50px;
+    width: 810px;
+}
+
+.extradata .terminalText{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    width: 34ch;
+    color: #000;
+
+    animation: typing 2s steps(34),
+    blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+.extradata p{
+    font-family:"Inter", sans-serif;
+    font-size: large;
+    color: #000;
+    padding-left: 10px;
+}
+
+/*footer*/
+
+footer{
+    background-color: #27a88e;
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid #1abc9c;
+}
+
+footer p{
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+/*Sobre mi*/
+
+.sobre-mi{ /*flexbox para acomodar la disposicion de los elementos en columna con una separación de 50px*/
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about_me_content{ /*flexbox para alinear la imagen y la presentacion en una fila*/
+    display: flex;
+    gap: 50px;
+    width: 820px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.presentacion{
+    max-width: 500px;
+}
+
+.presentacion h1{
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+.presentacion p{
+    font-family:"Inter", sans-serif; ;
+    font-size: large;
+    color: #000000;
+    padding-left: 10px;
+}
+.image404{
+    width: 300px;
+}
+
+.table-sobre-mi{
+    background-color: #fff;
+    max-width: 870px;
+    border-radius: 12px;
+}
+
+.seccion1{
+    border-top-left-radius: 12px;
+}
+.seccion2{
+    border-top-right-radius: 12px;
+}
+
+table{
+   border-collapse: collapse;
+   border-radius: 12px;
+}
+th{
+    background-color: #1abc9c;
+    color:#fff;
+    font-size: 1.3em;
+    font-family: 'Courier New', Courier, monospace;
+}
+th, td{
+    border: 2px  ;
+    padding: 20px;
+}
+
+td{
+    background-color: #2c2a2a;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+}
+
+.esquina1{
+    border-end-start-radius:12px ;
+}
+
+.esquina2{
+    border-end-end-radius: 12px;
+}
+
+.imagen{
+    width: 170px;
+}
+/*Proyectos*/
+
+.enlace-proyecto{
+    text-decoration: none;
+}
+
+.grid-projects{ /*Grid para organizar los elementos en 3 columnas que ocupen una fracción de espacio*/
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 30px;
+    font-family: monospace;
+    margin-bottom: 30px;
+}
+
+.backgroundProject-1{
+    background: url(/assets/multimedia/Project1.png) no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+}
+.backgroundProject-2{
+    background: url(/assets/multimedia/Project2.png) no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.backgroundProject-3{
+    background: url(/assets/multimedia/loading.gif), url(/assets/multimedia/projectComingSoon.gif) no-repeat  ;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.project{ /*Flex para organizar los elementos en columna*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    color: #fff;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    height: 325px;
+    width: 275px;
+}
+
+.backgroundProject-1:hover, .backgroundProject-2:hover, .backgroundProject-3:hover{
+    border-color:#1abc9c;
+    transform: translateY(-15px);
+    transition: 0.5s ease;
+}
+
+.project:hover{
+    border-color: #1abc9c;
+    box-shadow: 6px 10px #1abc9c;
+    transition: 0.5s ease;
+    backdrop-filter: none;
+
+    h1{
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+}
+
+.enlace-proyecto .backgroundProject-3 .project:active{
+    box-shadow: 6px 10px red;
+    border-color: red;
+    transition: 0.01s ease-out;
+}
+
+
+/*Contacto*/
+
+.Myform{
+    width: 420px;
+    max-height: 1100px;
+    border: 2px solid #1abc9c;
+    color: white;
+    padding: 30px 40px;
+    font-family: monospace;
+    background: url(/assets/multimedia/3sjl.gif) no-repeat;
+    background-color: #2c2a2a;
+}
+
+.Myform form{
+    display: flex; /*Coloca los campos del formulario en columna*/
+    flex-direction: column;
+    gap: 40px;
+}
+
+.Myform h1{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.Myform .cajaInput, .cajaInput-comentario{
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.Myform .cajaInput-comentario{
+    height: 100px;
+}
+
+input, textarea {
+    width: 100%;
+    height: 100%;
+    background-color: #2c2a2a;
+    font-size: large;
+    color: #fff;
+    border-bottom: 2px solid #1abc9c ;
+    border-right: 2px solid #1abc9c ;
+}
+
+textarea::placeholder, input::placeholder{
+    padding-left: 6px;
+    color: #fff;
+    font-family: 'Pixelify Sans';
+}
+
+
+textarea:focus, input:focus{
+    height: 115%;
+    transition: 0.5s ease;
+    outline: 1px solid #1abc9c;
+}
+
+#icon{
+    width: 25px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buttonContainer{ /*Flexbox para centrar el boton de envio*/
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.send{
+    width: 120px;
+    font-family: 'Pixelify Sans';
+    font-size: 1.4em;
+    border-radius: 10px;
+    background-color: rgb(212, 211, 211);
+    border-color: #9f9e9e;
+}
+
+.send:hover{
+    color: #fff;
+    background-color: #1abc9c;
+    border-bottom: 4px solid #27a88e ;
+    border-right: 4px solid #27a88e;
+    font-size: 1.6em;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.redes-sociales{ /*Flex para alinear los íconos de redes sociales en fila y hacia la derecha.*/
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    
+    i{
+        font-size: 2em;
+    }
+}
+
+.redes-sociales i:hover{
+    color: #1abc9c;
+}
